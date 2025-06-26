@@ -16,7 +16,6 @@ on:
 jobs:
   push-levy001-images:
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.modified, 'images-levy001/') || contains(github.event.head_commit.added, 'images-levy001/') || github.event_name == 'workflow_dispatch'
 
     steps:
     - name: Checkout repository
@@ -97,7 +96,6 @@ jobs:
 
   push-zgsm-images:
     runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.modified, 'images-zgsm/') || contains(github.event.head_commit.added, 'images-zgsm/') || github.event_name == 'workflow_dispatch'
 
     steps:
     - name: Checkout repository
